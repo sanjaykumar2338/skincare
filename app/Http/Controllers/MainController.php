@@ -92,7 +92,7 @@ class MainController extends Controller
 
             $type='newsletter';
             $contactus_email = new \stdClass();
-            $contactus_email->email = 'barinelectrical@gmail.com';
+            $contactus_email->email = 'skincaregardencity@gmail.com';
             //$contactus_email->email = 'sk963070@gmail.com';
             $message = 'test';
             Mail::to($contactus_email)->send(new AdminMessage($message,$type,$user));

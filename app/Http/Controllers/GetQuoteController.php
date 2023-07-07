@@ -319,15 +319,12 @@ class GetQuoteController extends Controller
                 $type='contactus';
 
                 $contactus_email = new \stdClass();
-                $contactus_email->email = 'contact@ejobs4pros.com';
+                $contactus_email->email = 'skincaregardencity@gmail.com';
                 Mail::to($contactus_email)->send(new ContactsMail($objt));
 
-                $contactus_email->email = 'dev@ejobs4pros.com';
+                $contactus_email->email = 'info@skincaregardencity.com';
                 Mail::to($contactus_email)->send(new ContactsMail($objt,$type,$objt));
-
-                $contactus_email->email = 'gabriel@ejobs4pros.com';
-                Mail::to($contactus_email)->send(new ContactsMail($objt,$type,$objt));
-
+                
                 Mail::to($objt)->send(new Thankyou($objt,$type));
                 Mail::to($user)->send(new ContactsMail($objt));
                 
